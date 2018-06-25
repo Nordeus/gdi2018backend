@@ -1,9 +1,14 @@
 package rs.sga.gdi18.hibernate.entity;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity
@@ -49,5 +54,16 @@ public class Player {
 
 	public int getLevel() {
 		return getXp() / 100;
+	}
+	
+	@OneToMany(mappedBy = "playerId", fetch = FetchType.EAGER)
+	private Collection<Battle> battles = new ArrayList<>();
+	
+	public Collection<Battle> getBattles() {
+		return this.battles;
+	}
+
+	public void setBattles(Collection<Battle> battles) {
+		this.battles = battles;
 	}
 }

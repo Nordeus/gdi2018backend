@@ -28,6 +28,7 @@
 		<property name="hbm2ddl.auto">update</property>
 
 		<mapping class="rs.sga.gdi18.hibernate.entity.Player"/>
+		<mapping class="rs.sga.gdi18.hibernate.entity.Battle"/>
 	</session-factory>
 
 </hibernate-configuration>
