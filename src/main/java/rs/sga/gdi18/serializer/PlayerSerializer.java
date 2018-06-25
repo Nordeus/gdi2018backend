@@ -11,6 +11,8 @@ public class PlayerSerializer {
 
 		playerJson.put("id", player.getId());
 		playerJson.put("username", player.getUsername());
+		playerJson.put("xp", player.getXp());
+		playerJson.put("level", player.getLevel());
 
 		return playerJson;
 	}

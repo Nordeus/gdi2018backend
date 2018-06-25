@@ -36,4 +36,18 @@ public class Player {
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
+	private Integer xp;
+
+	public int getXp() {
+		return xp != null ? xp : 0;
+	}
+
+	public void setXp(int xp) {
+		this.xp = xp;
+	}
+
+	public int getLevel() {
+		return getXp() / 100;
+	}
 }
